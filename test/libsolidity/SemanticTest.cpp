@@ -295,6 +295,10 @@ TestCase::TestResult SemanticTest::runTest(ostream& _stream, string const& _line
 
 bool SemanticTest::checkGasCostExpectation(TestFunctionCall& _test, bool _compileViaYul) const
 {
+	// TODO: check other evm versions
+	if (m_evmVersion != EVMVersion::istanbul())
+		return true;
+
 	string setting =
 		(_compileViaYul ? string{"Yul"} : "Legacy") +
 		(m_optimiserSettings == OptimiserSettings::full() ? "Optimized" : "");
