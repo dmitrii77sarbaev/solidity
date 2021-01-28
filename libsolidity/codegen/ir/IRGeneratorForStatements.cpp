@@ -1053,7 +1053,8 @@ void IRGeneratorForStatements::endVisit(FunctionCall const& _functionCall)
 	}
 	case FunctionType::Kind::Error:
 	{
-		solAssert(false, "");
+		// no-op
+		break;
 	}
 	case FunctionType::Kind::Assert:
 	case FunctionType::Kind::Require:
@@ -1211,40 +1212,59 @@ void IRGeneratorForStatements::endVisit(FunctionCall const& _functionCall)
 	}
 	case FunctionType::Kind::Revert:
 	{
-		if (arguments.empty())
+		bool usesString =
+			!arguments.empty() &&
+			arguments.front()->annotation().type->isImplicitlyConvertibleTo(*TypeProvider::stringMemory());
+		if (arguments.empty() || (usesString && m_context.revertStrings() == RevertStrings::Strip))
 			m_code << "revert(0, 0)\n";
 		else
 		{
 			solAssert(arguments.size() == 1, "");
-			solUnimplementedAssert(arguments.front()->annotation().type->isImplicitlyConvertibleTo(*TypeProvider::stringMemory()), "");
 
-			if (m_context.revertStrings() == RevertStrings::Strip)
-				m_code << "revert(0, 0)\n";
+			string signature;
+			vector<ASTPointer<Expression const>> errorArguments;
+			vector<Type const*> parameterTypes;
+			if (usesString)
+			{
+				signature = "Error(string)";
+				errorArguments = arguments;
+				parameterTypes.push_back(TypeProvider::stringMemory());
+			}
 			else
 			{
-				solAssert(type(*arguments.front()).isImplicitlyConvertibleTo(*TypeProvider::stringMemory()),"");
-
-				Whiskers templ(R"({
-					let <pos> := <allocateUnbounded>()
-					mstore(<pos>, <hash>)
-					let <end> := <encode>(add(<pos>, 4) <argumentVars>)
-					revert(<pos>, sub(<end>, <pos>))
-				})");
-				templ("pos", m_context.newYulVariable());
-				templ("end", m_context.newYulVariable());
-				templ("hash", util::selectorFromSignature("Error(string)").str());
-				templ("allocateUnbounded", m_utils.allocateUnboundedFunction());
-				templ(
-					"argumentVars",
-					joinHumanReadablePrefixed(IRVariable{*arguments.front()}.stackSlots())
-				);
-				templ("encode", m_context.abiFunctions().tupleEncoder(
-					{&type(*arguments.front())},
-					{TypeProvider::stringMemory()}
-				));
-
-				m_code << templ.render();
+				ErrorDefinition const* error = nullptr;
+				FunctionCall const* errorCall = dynamic_cast<FunctionCall const*>(_functionCall.arguments().back().get());
+				solAssert(errorCall, "");
+				solAssert(*errorCall->annotation().kind == FunctionCallKind::FunctionCall, "");
+				error = dynamic_cast<ErrorDefinition const*>(referencedDeclaration(errorCall->expression()));
+				solAssert(error, "");
+				signature = error->functionType(true)->externalSignature();
+				parameterTypes = error->functionType(true)->parameterTypes();
+				errorArguments = errorCall->arguments();
 			}
+
+			Whiskers templ(R"({
+				let <pos> := <allocateUnbounded>()
+				mstore(<pos>, <hash>)
+				let <end> := <encode>(add(<pos>, 4) <argumentVars>)
+				revert(<pos>, sub(<end>, <pos>))
+			})");
+			templ("pos", m_context.newYulVariable());
+			templ("end", m_context.newYulVariable());
+			templ("hash", util::selectorFromSignature(signature).str());
+			templ("allocateUnbounded", m_utils.allocateUnboundedFunction());
+
+			vector<string> errorArgumentVars;
+			vector<Type const*> errorArgumentTypes;
+			for (ASTPointer<Expression const> const& arg: errorArguments)
+			{
+				errorArgumentVars += IRVariable(*arg).stackSlots();
+				errorArgumentTypes.push_back(arg->annotation().type);
+			}
+			templ("argumentVars", joinHumanReadablePrefixed(errorArgumentVars));
+			templ("encode", m_context.abiFunctions().tupleEncoder(errorArgumentTypes, parameterTypes));
+
+			m_code << templ.render();
 		}
 
 		break;

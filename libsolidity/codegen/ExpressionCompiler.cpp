@@ -29,6 +29,7 @@
 #include <libsolidity/codegen/LValue.h>
 
 #include <libsolidity/ast/AST.h>
+#include <libsolidity/ast/ASTUtils.h>
 #include <libsolidity/ast/TypeProvider.h>
 
 #include <libevmasm/GasMeter.h>
@@ -786,27 +787,48 @@ bool ExpressionCompiler::visit(FunctionCall const& _functionCall)
 			break;
 		case FunctionType::Kind::Revert:
 		{
-			if (arguments.empty())
+			bool usesString =
+				!arguments.empty() &&
+				arguments.front()->annotation().type->isImplicitlyConvertibleTo(*TypeProvider::stringMemory());
+			if (arguments.empty() || (usesString && m_context.revertStrings() == RevertStrings::Strip))
+			{
+				if (!arguments.empty() && !*arguments.front()->annotation().isPure)
+				{
+					arguments.front()->accept(*this);
+					utils().popStackElement(*arguments.front()->annotation().type);
+				}
 				m_context.appendRevert();
+			}
 			else
 			{
-				// function-sel(Error(string)) + encoding
 				solAssert(arguments.size() == 1, "");
-				solUnimplementedAssert(arguments.front()->annotation().type->isImplicitlyConvertibleTo(*TypeProvider::stringMemory()), "");
-				if (m_context.revertStrings() == RevertStrings::Strip)
+				arguments.front()->accept(*this);
+
+				string signature;
+				vector<Type const*> parameterTypes;
+				vector<Type const*> argumentTypes;
+				if (usesString)
 				{
-					if (!*arguments.front()->annotation().isPure)
-					{
-						arguments.front()->accept(*this);
-						utils().popStackElement(*arguments.front()->annotation().type);
-					}
-					m_context.appendRevert();
+					signature = "Error(string)";
+					parameterTypes.push_back(TypeProvider::stringMemory());
+					argumentTypes = vector<Type const*>{arguments.front()->annotation().type};
 				}
 				else
 				{
-					arguments.front()->accept(*this);
-					utils().revertWithStringData(*arguments.front()->annotation().type);
+					ErrorDefinition const* error = nullptr;
+					FunctionCall const* errorCall = dynamic_cast<FunctionCall const*>(_functionCall.arguments().back().get());
+					solAssert(errorCall, "");
+					solAssert(*errorCall->annotation().kind == FunctionCallKind::FunctionCall, "");
+					error = dynamic_cast<ErrorDefinition const*>(referencedDeclaration(errorCall->expression()));
+					solAssert(error, "");
+					signature = error->functionType(true)->externalSignature();
+					parameterTypes = error->functionType(true)->parameterTypes();
+					for (ASTPointer<Expression const> const& arg: errorCall->arguments())
+						argumentTypes.push_back(arg->annotation().type);
 				}
+				utils().revertWithError(signature, parameterTypes, argumentTypes);
+				// TODO check this
+				m_context.adjustStackOffset(static_cast<int>(TupleType(argumentTypes).sizeOnStack()) - 1);
 			}
 			break;
 		}
@@ -910,7 +932,7 @@ bool ExpressionCompiler::visit(FunctionCall const& _functionCall)
 		}
 		case FunctionType::Kind::Error:
 		{
-			solAssert(false, "");
+			// no-op.
 		}
 		case FunctionType::Kind::BlockHash:
 		{
