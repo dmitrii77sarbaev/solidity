@@ -6,7 +6,11 @@ contract C {
 }
 // ====
 // EVMVersion: >=byzantium
-// revertStrings: debug
 // compileViaYul: also
+// revertStrings: debug
 // ----
 // f(uint256[][]): 0x20, 1 -> FAILURE, hex"08c379a0", 0x20, 43, "ABI decoding: invalid calldata a", "rray stride"
+// gas Legacy: 21804
+// gas LegacyOptimized: 21733
+// gas Yul: 21836
+// gas YulOptimized: 21727

@@ -15,4 +15,12 @@ contract C {
 // compileViaYul: also
 // ----
 // f(uint256,bytes,uint256): 6, 0x60, 9, 7, "abcdefg" -> 6, 7, "d", 9
+// gas Legacy: 23714
+// gas LegacyOptimized: 22706
+// gas Yul: 24454
+// gas YulOptimized: 22923
 // f_external(uint256,bytes,uint256): 6, 0x60, 9, 7, "abcdefg" -> 6, 7, "d", 9
+// gas Legacy: 23238
+// gas LegacyOptimized: 22533
+// gas Yul: 23876
+// gas YulOptimized: 22583

@@ -37,4 +37,12 @@ contract Main {
 // compileViaYul: also
 // ----
 // getFlag() -> true
+// gas Legacy: 25303
+// gas LegacyOptimized: 24902
+// gas Yul: 26730
+// gas YulOptimized: 25298
 // getName() -> "abc"
+// gas Legacy: 25209
+// gas LegacyOptimized: 24916
+// gas Yul: 26748
+// gas YulOptimized: 25144

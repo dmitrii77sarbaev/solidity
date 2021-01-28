@@ -18,5 +18,13 @@ contract C {
 // ====
 // compileViaYul: also
 // ----
-// f((uint128, uint64, uint128)[3]): 0, 0, 12, 0, 11, 0, 10, 0, 0 -> 10, 11, 12
-// g((uint128, uint64, uint128)[]): 0x20, 3, 0, 0, 12, 0, 11, 0, 10, 0, 0 -> 10, 11, 12
+// f((uint128,uint64,uint128)[3]): 0, 0, 12, 0, 11, 0, 10, 0, 0 -> 10, 11, 12
+// gas Legacy: 26406
+// gas LegacyOptimized: 24390
+// gas Yul: 27759
+// gas YulOptimized: 24813
+// g((uint128,uint64,uint128)[]): 0x20, 3, 0, 0, 12, 0, 11, 0, 10, 0, 0 -> 10, 11, 12
+// gas Legacy: 26914
+// gas LegacyOptimized: 24933
+// gas Yul: 28312
+// gas YulOptimized: 25754

@@ -41,10 +41,19 @@ contract c {
 // ====
 // compileViaYul: also
 // ----
-// storage: empty
-// test_short() -> 1780731860627700044960722568376587075150542249149356309979516913770823710
-// storage: nonempty
-// test_long() -> 67
-// storage: nonempty
-// test_pop() -> 1780731860627700044960722568376592200742329637303199754547598369979433020
+// storage: empty// test_short() -> 1780731860627700044960722568376587075150542249149356309979516913770823710
+// gas Legacy: 110938
+// gas LegacyOptimized: 109724
+// gas Yul: 81270
+// gas YulOptimized: 74000
+// storage: nonempty// test_long() -> 67
+// gas Legacy: 213590
+// gas LegacyOptimized: 211044
+// gas Yul: 150411
+// gas YulOptimized: 134832
+// storage: nonempty// test_pop() -> 1780731860627700044960722568376592200742329637303199754547598369979433020
+// gas Legacy: 176030
+// gas LegacyOptimized: 173503
+// gas Yul: 112230
+// gas YulOptimized: 97025
 // storage: nonempty

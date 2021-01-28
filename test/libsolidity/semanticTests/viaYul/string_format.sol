@@ -5,10 +5,26 @@ contract C {
 	function h() external pure returns (bytes4) { return 0xcafecafe; }
 }
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // f1() -> 0x20, 6, left(0x616263616263)
+// gas Legacy: 21849
+// gas LegacyOptimized: 21604
+// gas Yul: 22742
+// gas YulOptimized: 21986
 // f2() -> 32, 47, 44048183223289766195424279195050628400112610419087780792899004030957505095210, 18165586057823232067963737336409268114628061002662705707816940456850361417728
+// gas Legacy: 21893
+// gas LegacyOptimized: 21653
+// gas Yul: 22795
+// gas YulOptimized: 22051
 // g() -> left(0x616263616263)
+// gas Legacy: 21445
+// gas LegacyOptimized: 21342
+// gas Yul: 21869
+// gas YulOptimized: 21509
 // h() -> left(0xcafecafe)
+// gas Legacy: 21413
+// gas LegacyOptimized: 21325
+// gas Yul: 21933
+// gas YulOptimized: 21477

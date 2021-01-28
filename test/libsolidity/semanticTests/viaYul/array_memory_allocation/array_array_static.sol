@@ -17,6 +17,22 @@ contract C {
 // compileViaYul: also
 // ----
 // set(string,uint256,uint256): 0x60, 2, 0, 32, "01234567890123456789012345678901" -> 0
+// gas Legacy: 25435
+// gas LegacyOptimized: 24403
+// gas Yul: 29061
+// gas YulOptimized: 24977
 // set(string,uint256,uint256): 0x60, 2, 1, 32, "01234567890123456789012345678901" -> 0
+// gas Legacy: 25447
+// gas LegacyOptimized: 24415
+// gas Yul: 29073
+// gas YulOptimized: 24989
 // set(string,uint256,uint256): 0x60, 2, 2, 32, "01234567890123456789012345678901" -> FAILURE, hex"4e487b71", 0x32
+// gas Legacy: 25206
+// gas LegacyOptimized: 24284
+// gas Yul: 28304
+// gas YulOptimized: 24655
 // set(string,uint256,uint256): 0x60, 200, 199, 32, "01234567890123456789012345678901" -> 0
+// gas Legacy: 61685
+// gas LegacyOptimized: 58475
+// gas Yul: 160747
+// gas YulOptimized: 74691

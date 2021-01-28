@@ -29,6 +29,22 @@ contract C {
 // compileViaYul: also
 // ----
 // f(bool,bool): true, true -> 1, 2, 96, 7, "success"
+// gas Legacy: 28598
+// gas LegacyOptimized: 26570
+// gas Yul: 27392
+// gas YulOptimized: 27392
 // f(bool,bool): true, false -> 12, 0, 96, 7, "failure"
+// gas Legacy: 28675
+// gas LegacyOptimized: 26855
+// gas Yul: 27319
+// gas YulOptimized: 27319
 // f(bool,bool): false, true -> 99, 0, 96, 7, "failure"
+// gas Legacy: 25761
+// gas LegacyOptimized: 24657
+// gas Yul: 24847
+// gas YulOptimized: 24847
 // f(bool,bool): false, false -> 99, 0, 96, 7, "failure"
+// gas Legacy: 25749
+// gas LegacyOptimized: 24645
+// gas Yul: 24835
+// gas YulOptimized: 24835

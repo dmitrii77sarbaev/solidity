@@ -18,3 +18,7 @@ contract test {
 // compileViaYul: also
 // ----
 // deleteIt() -> 0
+// gas Legacy: 23166
+// gas LegacyOptimized: 22100
+// gas Yul: 25319
+// gas YulOptimized: 22966

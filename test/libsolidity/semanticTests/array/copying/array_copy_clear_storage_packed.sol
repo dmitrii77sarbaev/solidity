@@ -42,5 +42,17 @@ contract C {
 // compileViaYul: also
 // ----
 // f() -> 0
+// gas Legacy: 107306
+// gas LegacyOptimized: 105896
+// gas Yul: 118232
+// gas YulOptimized: 112032
 // g() -> 0
+// gas Legacy: 90931
+// gas LegacyOptimized: 89415
+// gas Yul: 96953
+// gas YulOptimized: 92021
 // h() -> 0
+// gas Legacy: 107328
+// gas LegacyOptimized: 105927
+// gas Yul: 118254
+// gas YulOptimized: 112057

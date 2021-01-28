@@ -43,8 +43,32 @@ contract C {
 // compileViaYul: also
 // ----
 // set() ->
+// gas Legacy: 87350
+// gas LegacyOptimized: 83869
+// gas Yul: 89632
+// gas YulOptimized: 85653
 // t1() -> 7
+// gas Legacy: 22336
+// gas LegacyOptimized: 22197
+// gas Yul: 23122
+// gas YulOptimized: 22489
 // t2() -> 8
+// gas Legacy: 24548
+// gas LegacyOptimized: 24188
+// gas Yul: 25917
+// gas YulOptimized: 24521
 // t3() -> 7
+// gas Legacy: 22292
+// gas LegacyOptimized: 22153
+// gas Yul: 23078
+// gas YulOptimized: 22445
 // t4() -> 8
+// gas Legacy: 24547
+// gas LegacyOptimized: 24187
+// gas Yul: 26005
+// gas YulOptimized: 24609
 // x() -> 2
+// gas Legacy: 22236
+// gas LegacyOptimized: 22111
+// gas Yul: 22734
+// gas YulOptimized: 22290

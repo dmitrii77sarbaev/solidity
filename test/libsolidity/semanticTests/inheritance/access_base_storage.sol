@@ -23,9 +23,21 @@ contract Derived is Base {
 }
 
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // setData(uint256,uint256): 1, 2 -> true
+// gas Legacy: 62175
+// gas LegacyOptimized: 61718
+// gas Yul: 64691
+// gas YulOptimized: 61881
 // getViaBase() -> 1
+// gas Legacy: 22179
+// gas LegacyOptimized: 22070
+// gas Yul: 22743
+// gas YulOptimized: 22240
 // getViaDerived() -> 1, 2
+// gas Legacy: 23115
+// gas LegacyOptimized: 22916
+// gas Yul: 23871
+// gas YulOptimized: 23135

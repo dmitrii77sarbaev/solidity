@@ -43,8 +43,16 @@ contract C {
     }
 }
 // ====
-// compileViaYul: also
 // EVMVersion: >homestead
+// compileViaYul: also
 // ----
 // g() -> 32, 196, hex"eccb829a", 32, 1, 32, 32, 1, 42, hex"00000000000000000000000000000000000000000000000000000000"
+// gas Legacy: 29378
+// gas LegacyOptimized: 27210
+// gas Yul: 29507
+// gas YulOptimized: 29477
 // h() -> 32, 196, hex"eccb829a", 32, 1, 32, 32, 1, 42, hex"00000000000000000000000000000000000000000000000000000000"
+// gas Legacy: 35862
+// gas LegacyOptimized: 31816
+// gas Yul: 34569
+// gas YulOptimized: 34539

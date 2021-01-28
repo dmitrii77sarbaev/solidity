@@ -23,10 +23,21 @@ contract C {
     }
 }
 // ====
-// compileViaYul: also
 // EVMVersion: >homestead
+// compileViaYul: also
 // ----
-// library: L
-// f() -> 42
+// library: L// f() -> 42
+// gas Legacy: 27857
+// gas LegacyOptimized: 26826
+// gas Yul: 29926
+// gas YulOptimized: 27124
 // g() -> true, 42
+// gas Legacy: 27983
+// gas LegacyOptimized: 26704
+// gas Yul: 30164
+// gas YulOptimized: 26803
 // h() -> true, 42
+// gas Legacy: 27964
+// gas LegacyOptimized: 26685
+// gas Yul: 30145
+// gas YulOptimized: 26784

@@ -29,7 +29,11 @@ contract Flow {
 }
 
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // f() -> 1, 2
+// gas Legacy: 23451
+// gas LegacyOptimized: 23057
+// gas Yul: 24809
+// gas YulOptimized: 23457

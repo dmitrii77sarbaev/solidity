@@ -50,11 +50,47 @@ contract C {
 // compileViaYul: also
 // ----
 // getMinMax() -> 0, 255
+// gas Legacy: 21727
+// gas LegacyOptimized: 21453
+// gas Yul: 22135
+// gas YulOptimized: 21632
 // intToEnum(uint8): 0 -> 0
+// gas Legacy: 21905
+// gas LegacyOptimized: 21611
+// gas Yul: 22378
+// gas YulOptimized: 21773
 // intToEnum(uint8): 255 -> 255
+// gas Legacy: 21917
+// gas LegacyOptimized: 21623
+// gas Yul: 22390
+// gas YulOptimized: 21785
 // enumToInt(uint8): 0 -> 0
+// gas Legacy: 21783
+// gas LegacyOptimized: 21602
+// gas Yul: 22203
+// gas YulOptimized: 21750
 // enumToInt(uint8): 255 -> 255
+// gas Legacy: 21795
+// gas LegacyOptimized: 21614
+// gas Yul: 22215
+// gas YulOptimized: 21762
 // enumToInt(uint8): 256 -> FAILURE
+// gas Legacy: 21493
+// gas LegacyOptimized: 21434
+// gas Yul: 21520
+// gas YulOptimized: 21444
 // decodeEnum(bytes): 0x20, 32, 0 -> 0
+// gas Legacy: 22979
+// gas LegacyOptimized: 22370
+// gas Yul: 23317
+// gas YulOptimized: 22527
 // decodeEnum(bytes): 0x20, 32, 255 -> 255
+// gas Legacy: 22991
+// gas LegacyOptimized: 22382
+// gas Yul: 23329
+// gas YulOptimized: 22539
 // decodeEnum(bytes): 0x20, 32, 256 -> FAILURE
+// gas Legacy: 22640
+// gas LegacyOptimized: 22202
+// gas Yul: 22752
+// gas YulOptimized: 22241

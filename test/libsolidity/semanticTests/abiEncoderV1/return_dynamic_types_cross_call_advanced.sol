@@ -12,7 +12,11 @@ contract C {
 	}
 }
 // ====
-// compileViaYul: also
 // EVMVersion: >homestead
+// compileViaYul: also
 // ----
 // f() -> 0x80, -1, 0xe0, 0x1234, 40, "12345678901234567890123456789012", "34567890", 4, 97767552542602192590433234714624, 0, 0, 537879995309340587922569878831104
+// gas Legacy: 30919
+// gas LegacyOptimized: 27230
+// gas Yul: 34569
+// gas YulOptimized: 27853

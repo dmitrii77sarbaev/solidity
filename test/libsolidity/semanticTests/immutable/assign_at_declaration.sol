@@ -8,3 +8,7 @@ contract A {
 // compileViaYul: also
 // ----
 // f() -> 2
+// gas Legacy: 21385
+// gas LegacyOptimized: 21276
+// gas Yul: 21854
+// gas YulOptimized: 21235

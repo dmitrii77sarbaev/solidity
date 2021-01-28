@@ -8,3 +8,7 @@ contract C {
 // compileViaYul: also
 // ----
 // f(uint256[2][]): 0x0, 1, 8, 7, 6, 5 -> 0x20, 2, 8, 7, 6, 5
+// gas Legacy: 25227
+// gas LegacyOptimized: 23519
+// gas Yul: 27709
+// gas YulOptimized: 24461

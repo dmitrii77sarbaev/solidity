@@ -20,3 +20,7 @@ contract C {
 // compileViaYul: also
 // ----
 // f() -> true # This code interprets x as an array length and thus will go out of gas. neither of the two should throw due to out-of-bounds access #
+// gas Legacy: 91117
+// gas LegacyOptimized: 90807
+// gas Yul: 99785
+// gas YulOptimized: 92985

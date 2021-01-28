@@ -15,5 +15,17 @@ contract C {
 // compileViaYul: also
 // ----
 // f(bytes32): "789" -> "9"
+// gas Legacy: 21871
+// gas LegacyOptimized: 21569
+// gas Yul: 22320
+// gas YulOptimized: 21711
 // g(bytes32): "789" -> 0x35
+// gas Legacy: 93036
+// gas LegacyOptimized: 92718
+// gas Yul: 95606
+// gas YulOptimized: 91840
 // data(uint256): 0x01 -> "8"
+// gas Legacy: 23625
+// gas LegacyOptimized: 23350
+// gas Yul: 25115
+// gas YulOptimized: 24323

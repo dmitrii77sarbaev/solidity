@@ -15,3 +15,7 @@ contract Main {
 // compileViaYul: also
 // ----
 // f(bytes,uint256,uint256,uint256): 0x80, 3, 4, 5, 78, "abcdefghijklmnopqrstuvwxyzabcdef", "ghijklmnopqrstuvwxyzabcdefghijkl", "mnopqrstuvwxyz" -> "d", "e", "f"
+// gas Legacy: 25267
+// gas LegacyOptimized: 24207
+// gas Yul: 26344
+// gas YulOptimized: 24503

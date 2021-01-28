@@ -19,3 +19,7 @@ contract C {
 // compileViaYul: also
 // ----
 // secondItem() -> 0x22
+// gas Legacy: 21796
+// gas LegacyOptimized: 21613
+// gas Yul: 23742
+// gas YulOptimized: 22077

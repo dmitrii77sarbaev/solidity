@@ -34,6 +34,22 @@ contract C {
 // compileViaYul: also
 // ----
 // f((uint256,uint256[],uint256)): 0x20, 42, 0x60, 21, 3, 1, 2, 3 -> 42, 0x60, 21, 3, 1, 2, 3
+// gas Legacy: 25943
+// gas LegacyOptimized: 23785
+// gas Yul: 24053
+// gas YulOptimized: 24053
 // g((uint256,uint256[],uint256)): 0x20, 42, 0x60, 21, 3, 1, 2, 3 -> 42, 3, 21, 1, 2, 3
-// g2((uint256,uint256[],uint256),(uint256,uint256[],uint256)): 0x40, 0x0120, 42, 0x60, 21, 2, 1, 2, 3, 7, 0x80, 9, 0, 1, 17  -> 42, 21, 7, 1, 9, 17
+// gas Legacy: 24376
+// gas LegacyOptimized: 23769
+// gas Yul: 24036
+// gas YulOptimized: 24036
+// g2((uint256,uint256[],uint256),(uint256,uint256[],uint256)): 0x40, 0x0120, 42, 0x60, 21, 2, 1, 2, 3, 7, 0x80, 9, 0, 1, 17 -> 42, 21, 7, 1, 9, 17
+// gas Legacy: 24956
+// gas LegacyOptimized: 24372
+// gas Yul: 24657
+// gas YulOptimized: 24657
 // h() -> 42, 3, 21, 1, 2, 3
+// gas Legacy: 29477
+// gas LegacyOptimized: 28164
+// gas Yul: 26823
+// gas YulOptimized: 26780

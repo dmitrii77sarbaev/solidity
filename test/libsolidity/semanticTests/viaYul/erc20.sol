@@ -97,8 +97,20 @@ contract ERC20 {
 // compileViaYul: true
 // ----
 // totalSupply() -> 20
+// gas Yul: 22765
+// gas YulOptimized: 22265
 // transfer(address,uint256): 2, 5 -> true
+// gas Yul: 51641
+// gas YulOptimized: 47026
 // decreaseAllowance(address,uint256): 2, 0 -> true
+// gas Yul: 29737
+// gas YulOptimized: 26075
 // decreaseAllowance(address,uint256): 2, 1 -> FAILURE, hex"4e487b71", 0x11
+// gas Yul: 23940
+// gas YulOptimized: 22848
 // transfer(address,uint256): 2, 14 -> true
+// gas Yul: 32441
+// gas YulOptimized: 27826
 // transfer(address,uint256): 2, 2 -> FAILURE, hex"4e487b71", 0x11
+// gas Yul: 24104
+// gas YulOptimized: 22838

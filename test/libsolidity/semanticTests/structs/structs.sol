@@ -31,5 +31,17 @@ contract test {
 // compileViaYul: also
 // ----
 // check() -> false
+// gas Legacy: 22359
+// gas LegacyOptimized: 22216
+// gas Yul: 23066
+// gas YulOptimized: 22433
 // set() ->
+// gas Legacy: 129577
+// gas LegacyOptimized: 127009
+// gas Yul: 132857
+// gas YulOptimized: 128680
 // check() -> true
+// gas Legacy: 28183
+// gas LegacyOptimized: 27215
+// gas Yul: 31210
+// gas YulOptimized: 28382

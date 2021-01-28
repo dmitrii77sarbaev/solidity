@@ -17,3 +17,5 @@ contract C {
 // compileViaYul: false
 // ----
 // f() -> 0x6465616462656566313564656164000000000000000000000000000000000010
+// gas Legacy: 43500
+// gas LegacyOptimized: 43351

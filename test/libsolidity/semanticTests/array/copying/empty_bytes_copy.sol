@@ -26,5 +26,17 @@ contract C {
 // compileViaYul: also
 // ----
 // fromMemory() -> 0x00
+// gas Legacy: 48816
+// gas LegacyOptimized: 47848
+// gas Yul: 49668
+// gas YulOptimized: 48018
 // fromCalldata(bytes): 0x40, 0x60, 0x00, 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff -> 0x00
+// gas Legacy: 31503
+// gas LegacyOptimized: 30502
+// gas Yul: 30668
+// gas YulOptimized: 29579
 // fromStorage() -> 0x00
+// gas Legacy: 51237
+// gas LegacyOptimized: 50320
+// gas Yul: 50548
+// gas YulOptimized: 49456

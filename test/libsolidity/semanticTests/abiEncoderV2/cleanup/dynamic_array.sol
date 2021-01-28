@@ -14,10 +14,26 @@ contract C {
     }
 }
 // ====
-// compileViaYul: also
 // EVMVersion: >homestead
+// compileViaYul: also
 // ----
 // f(uint256[]): 0x20, 2, 1, 1 -> 0x20, 0x84, hex"304a4c23", 0x20, 2, 1, 1, hex"00000000000000000000000000000000000000000000000000000000"
+// gas Legacy: 28893
+// gas LegacyOptimized: 27187
+// gas Yul: 30824
+// gas YulOptimized: 27888
 // ggg(uint8[]): 0x20, 2, 1, 1 -> 0x20, 0x84, hex"304a4c23", 0x20, 2, 1, 1, hex"00000000000000000000000000000000000000000000000000000000"
+// gas Legacy: 23470
+// gas LegacyOptimized: 23029
+// gas Yul: 24251
+// gas YulOptimized: 23170
 // f(uint256[]): 0x20, 2, 0x0101, 0x0101 -> 0x20, 0x84, hex"304a4c23", 0x20, 2, 1, 1, hex"00000000000000000000000000000000000000000000000000000000"
+// gas Legacy: 28917
+// gas LegacyOptimized: 27211
+// gas Yul: 30848
+// gas YulOptimized: 27912
 // ggg(uint8[]): 0x20, 2, 0x0101, 0x0101 -> FAILURE
+// gas Legacy: 22345
+// gas LegacyOptimized: 22222
+// gas Yul: 22486
+// gas YulOptimized: 22097

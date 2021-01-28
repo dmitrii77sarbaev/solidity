@@ -12,3 +12,7 @@ contract C {
 // compileViaYul: also
 // ----
 // f(int16[]): 0x20, 0x02, 0x7fff, 0x7fff -> true
+// gas Legacy: 22645
+// gas LegacyOptimized: 22323
+// gas Yul: 23346
+// gas YulOptimized: 22305

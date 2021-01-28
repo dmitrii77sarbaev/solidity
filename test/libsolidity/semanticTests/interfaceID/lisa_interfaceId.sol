@@ -44,6 +44,22 @@ contract Lisa is ERC165MappingImplementation, Simpson {
 // compileViaYul: also
 // ----
 // supportsInterface(bytes4): left(0x01ffc9a0) -> false
+// gas Legacy: 22764
+// gas LegacyOptimized: 22474
+// gas Yul: 23338
+// gas YulOptimized: 22610
 // supportsInterface(bytes4): left(0x01ffc9a7) -> true
+// gas Legacy: 22764
+// gas LegacyOptimized: 22474
+// gas Yul: 23338
+// gas YulOptimized: 22610
 // supportsInterface(bytes4): left(0x73b6b492) -> true
+// gas Legacy: 22764
+// gas LegacyOptimized: 22474
+// gas Yul: 23338
+// gas YulOptimized: 22610
 // supportsInterface(bytes4): left(0x70b6b492) -> false
+// gas Legacy: 22764
+// gas LegacyOptimized: 22474
+// gas Yul: 23338
+// gas YulOptimized: 22610

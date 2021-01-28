@@ -15,12 +15,43 @@ contract C {
 // ====
 // compileViaYul: also
 // ----
-// library: L
-// g(uint256,uint256): 1, 1 -> true
+// library: L// g(uint256,uint256): 1, 1 -> true
+// gas Legacy: 24641
+// gas LegacyOptimized: 23363
+// gas Yul: 25093
+// gas YulOptimized: 23094
 // g(uint256,uint256): 1, 2 -> false
+// gas Legacy: 24727
+// gas LegacyOptimized: 23455
+// gas Yul: 25245
+// gas YulOptimized: 23213
 // g(uint256,uint256): 2, 3 -> false
+// gas Legacy: 24727
+// gas LegacyOptimized: 23455
+// gas Yul: 25245
+// gas YulOptimized: 23213
 // g(uint256,uint256): 2, 4 -> true
+// gas Legacy: 24641
+// gas LegacyOptimized: 23363
+// gas Yul: 25093
+// gas YulOptimized: 23094
 // g(uint256,uint256): 2, 5 -> false
+// gas Legacy: 24727
+// gas LegacyOptimized: 23455
+// gas Yul: 25245
+// gas YulOptimized: 23213
 // g(uint256,uint256): 4, 15 -> false
+// gas Legacy: 24727
+// gas LegacyOptimized: 23455
+// gas Yul: 25245
+// gas YulOptimized: 23213
 // g(uint256,uint256): 4, 16 -> true
+// gas Legacy: 24641
+// gas LegacyOptimized: 23363
+// gas Yul: 25093
+// gas YulOptimized: 23094
 // g(uint256,uint256): 4, 17 -> false
+// gas Legacy: 24727
+// gas LegacyOptimized: 23455
+// gas Yul: 25245
+// gas YulOptimized: 23213

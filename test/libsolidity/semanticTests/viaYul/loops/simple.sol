@@ -30,11 +30,31 @@ contract C {
     }
 }
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // f() -> 1024
+// gas Legacy: 25821
+// gas LegacyOptimized: 23172
+// gas Yul: 28984
+// gas YulOptimized: 23736
 // g() -> 1024
+// gas Legacy: 25887
+// gas LegacyOptimized: 23238
+// gas Yul: 29050
+// gas YulOptimized: 23802
 // h() -> 2
+// gas Legacy: 21642
+// gas LegacyOptimized: 21389
+// gas Yul: 22327
+// gas YulOptimized: 21686
 // i() -> 3
+// gas Legacy: 21917
+// gas LegacyOptimized: 21554
+// gas Yul: 23023
+// gas YulOptimized: 21993
 // j() ->
+// gas Legacy: 21208
+// gas LegacyOptimized: 21208
+// gas Yul: 21640
+// gas YulOptimized: 21383

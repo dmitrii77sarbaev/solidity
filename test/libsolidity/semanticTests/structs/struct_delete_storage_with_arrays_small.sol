@@ -27,3 +27,5 @@ contract C {
 // compileViaYul: true
 // ----
 // f() -> 0
+// gas Yul: 129331
+// gas YulOptimized: 118884

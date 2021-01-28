@@ -82,8 +82,32 @@ contract C {
 // compileViaYul: also
 // ----
 // a() -> 0x00
+// gas Legacy: 23750
+// gas LegacyOptimized: 23301
+// gas Yul: 24477
+// gas YulOptimized: 23685
 // b() -> 0x00
+// gas Legacy: 23921
+// gas LegacyOptimized: 23420
+// gas Yul: 24637
+// gas YulOptimized: 23801
 // b2() -> 0x00
+// gas Legacy: 23877
+// gas LegacyOptimized: 23376
+// gas Yul: 24593
+// gas YulOptimized: 23757
 // b3() -> 0x20, 0x00
+// gas Legacy: 24438
+// gas LegacyOptimized: 23765
+// gas Yul: 25220
+// gas YulOptimized: 24199
 // c() -> 0x20, 7, "abcdefg"
+// gas Legacy: 24674
+// gas LegacyOptimized: 23968
+// gas Yul: 25450
+// gas YulOptimized: 24403
 // d() -> 0x20, 7, "abcdefg"
+// gas Legacy: 24660
+// gas LegacyOptimized: 23954
+// gas Yul: 25436
+// gas YulOptimized: 24389

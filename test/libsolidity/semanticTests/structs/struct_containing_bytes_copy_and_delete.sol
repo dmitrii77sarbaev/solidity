@@ -23,13 +23,29 @@ contract c {
 // ====
 // compileViaYul: also
 // ----
-// storage: empty
-// set(uint256,bytes,uint256): 12, 0x60, 13, 33, "12345678901234567890123456789012", "3" -> true
+// storage: empty// set(uint256,bytes,uint256): 12, 0x60, 13, 33, "12345678901234567890123456789012", "3" -> true
+// gas Legacy: 124736
+// gas LegacyOptimized: 124199
+// gas Yul: 127524
+// gas YulOptimized: 124422
 // test(uint256): 32 -> "3"
-// storage: nonempty
-// copy() -> true
-// storage: empty
-// set(uint256,bytes,uint256): 12, 0x60, 13, 33, "12345678901234567890123456789012", "3" -> true
-// storage: nonempty
-// del() -> true
+// gas Legacy: 24464
+// gas LegacyOptimized: 24196
+// gas Yul: 24399
+// gas YulOptimized: 23552
+// storage: nonempty// copy() -> true
+// gas Legacy: 29287
+// gas LegacyOptimized: 29132
+// gas Yul: 35462
+// gas YulOptimized: 29633
+// storage: empty// set(uint256,bytes,uint256): 12, 0x60, 13, 33, "12345678901234567890123456789012", "3" -> true
+// gas Legacy: 28736
+// gas LegacyOptimized: 28199
+// gas Yul: 31524
+// gas YulOptimized: 28422
+// storage: nonempty// del() -> true
+// gas Legacy: 26740
+// gas LegacyOptimized: 26591
+// gas Yul: 32410
+// gas YulOptimized: 29519
 // storage: empty

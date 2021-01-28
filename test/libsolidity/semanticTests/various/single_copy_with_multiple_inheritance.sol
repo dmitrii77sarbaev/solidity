@@ -28,9 +28,21 @@ contract B is Base {
 contract Derived is Base, B, A {}
 
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // getViaB() -> 0
+// gas Legacy: 22280
+// gas LegacyOptimized: 22171
+// gas Yul: 22889
+// gas YulOptimized: 22306
 // setViaA(uint256): 23 ->
+// gas Legacy: 41675
+// gas LegacyOptimized: 41479
+// gas Yul: 43109
+// gas YulOptimized: 41595
 // getViaB() -> 23
+// gas Legacy: 22280
+// gas LegacyOptimized: 22171
+// gas Yul: 22889
+// gas YulOptimized: 22306

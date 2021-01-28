@@ -20,3 +20,7 @@ contract Sample {
 // compileViaYul: also
 // ----
 // p(uint256): 0x0 -> 0xbbbb, 0xcccc, 0x80, 0xc0, 0x05, "hello", 0x05, "world"
+// gas Legacy: 30342
+// gas LegacyOptimized: 28680
+// gas Yul: 28288
+// gas YulOptimized: 25565

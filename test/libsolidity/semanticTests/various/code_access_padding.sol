@@ -18,3 +18,7 @@ contract C {
 // compileViaYul: also
 // ----
 // diff() -> 0 # This checks that the allocation function pads to multiples of 32 bytes #
+// gas Legacy: 21729
+// gas LegacyOptimized: 21611
+// gas Yul: 22500
+// gas YulOptimized: 21792

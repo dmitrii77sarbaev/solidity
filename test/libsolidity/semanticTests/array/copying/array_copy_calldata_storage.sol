@@ -22,4 +22,12 @@ contract c {
 // compileViaYul: also
 // ----
 // store(uint256[9],uint8[3][]): 21, 22, 23, 24, 25, 26, 27, 28, 29, 0x140, 4, 1, 2, 3, 11, 12, 13, 21, 22, 23, 31, 32, 33 -> 32
+// gas Legacy: 817315
+// gas LegacyOptimized: 816837
+// gas Yul: 644592
+// gas YulOptimized: 629040
 // retrieve() -> 9, 28, 9, 28, 4, 3, 32
+// gas Legacy: 30556
+// gas LegacyOptimized: 29150
+// gas Yul: 32666
+// gas YulOptimized: 27703

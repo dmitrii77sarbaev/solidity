@@ -15,8 +15,16 @@ contract Derived is Base {
     }
 }
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // getBMember() -> 5
+// gas Legacy: 22179
+// gas LegacyOptimized: 22070
+// gas Yul: 22743
+// gas YulOptimized: 22208
 // getDMember() -> 6
+// gas Legacy: 22201
+// gas LegacyOptimized: 22092
+// gas Yul: 22765
+// gas YulOptimized: 22262

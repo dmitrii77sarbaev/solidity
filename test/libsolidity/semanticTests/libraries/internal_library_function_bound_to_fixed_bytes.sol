@@ -15,3 +15,7 @@ contract C {
 // compileViaYul: also
 // ----
 // sum(bytes2,bytes2): left(0x1100), left(0x0022) -> left(0x1122)
+// gas Legacy: 22411
+// gas LegacyOptimized: 22045
+// gas Yul: 23263
+// gas YulOptimized: 21962

@@ -29,7 +29,27 @@ contract C {
 // compileViaYul: also
 // ----
 // get() -> 0
+// gas Legacy: 22726
+// gas LegacyOptimized: 22378
+// gas Yul: 23908
+// gas YulOptimized: 22590
 // mappingAccess(uint256): 1 -> 0, 0
+// gas Legacy: 23595
+// gas LegacyOptimized: 23211
+// gas Yul: 24364
+// gas YulOptimized: 23406
 // set(uint256): 4
+// gas Legacy: 42108
+// gas LegacyOptimized: 41670
+// gas Yul: 44159
+// gas YulOptimized: 41860
 // get() -> 4
+// gas Legacy: 22726
+// gas LegacyOptimized: 22378
+// gas Yul: 23908
+// gas YulOptimized: 22590
 // mappingAccess(uint256): 1 -> 4, 0
+// gas Legacy: 23595
+// gas LegacyOptimized: 23211
+// gas Yul: 24364
+// gas YulOptimized: 23406

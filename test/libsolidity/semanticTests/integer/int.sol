@@ -233,14 +233,46 @@ contract test {
 	}
 }
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // intMinA() -> true
+// gas Legacy: 21782
+// gas LegacyOptimized: 21405
+// gas Yul: 23493
+// gas YulOptimized: 21468
 // intMinB() -> true
+// gas Legacy: 21759
+// gas LegacyOptimized: 21382
+// gas Yul: 23559
+// gas YulOptimized: 21534
 // intMinC() -> true
+// gas Legacy: 21804
+// gas LegacyOptimized: 21487
+// gas Yul: 23545
+// gas YulOptimized: 21490
 // intMinD() -> true
+// gas Legacy: 21817
+// gas LegacyOptimized: 21535
+// gas Yul: 23657
+// gas YulOptimized: 21600
 // intMaxA() -> true
+// gas Legacy: 21781
+// gas LegacyOptimized: 21380
+// gas Yul: 23533
+// gas YulOptimized: 21556
 // intMaxB() -> true
+// gas Legacy: 21826
+// gas LegacyOptimized: 21425
+// gas Yul: 23489
+// gas YulOptimized: 21512
 // intMaxC() -> true
+// gas Legacy: 21748
+// gas LegacyOptimized: 21396
+// gas Yul: 23531
+// gas YulOptimized: 21434
 // intMaxD() -> true
+// gas Legacy: 21795
+// gas LegacyOptimized: 21498
+// gas Yul: 23731
+// gas YulOptimized: 21578

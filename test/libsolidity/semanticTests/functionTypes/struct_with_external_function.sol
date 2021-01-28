@@ -32,3 +32,7 @@ contract Flow {
 // compileViaYul: also
 // ----
 // f() -> 1, 2
+// gas Legacy: 27699
+// gas LegacyOptimized: 26952
+// gas Yul: 27913
+// gas YulOptimized: 27913

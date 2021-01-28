@@ -31,9 +31,37 @@ contract C {
 // compileViaYul: also
 // ----
 // f1(bytes,uint256,uint256,bytes): 0x80, 1, 5, 0xC0, 8, "abcdefgh", 4, "bcde" -> true
+// gas Legacy: 24332
+// gas LegacyOptimized: 23533
+// gas Yul: 25633
+// gas YulOptimized: 24240
 // f1(bytes,uint256,uint256,bytes): 0x80, 1, 5, 0xC0, 8, "abcdefgh", 4, "bcdf" -> false
+// gas Legacy: 24332
+// gas LegacyOptimized: 23533
+// gas Yul: 25633
+// gas YulOptimized: 24240
 // f2(bytes,uint256): 0x40, 0, 0x80, 0x21, 0x40, 0x7, "abcdefg" -> 0x21, 0x40, 0x7, "abcdefg"
+// gas Legacy: 24586
+// gas LegacyOptimized: 23527
+// gas Yul: 25026
+// gas YulOptimized: 23786
 // f3(bytes,uint256,uint256,bytes): 0x80, 1, 5, 0xC0, 8, "abcdefgh", 4, "bcde" -> true
+// gas Legacy: 56242
+// gas LegacyOptimized: 50685
+// gas Yul: 122068
+// gas YulOptimized: 77773
 // f3(bytes,uint256,uint256,bytes): 0x80, 1, 5, 0xC0, 8, "abcdefgh", 4, "bcdf" -> false
+// gas Legacy: 46857
+// gas LegacyOptimized: 42766
+// gas Yul: 93648
+// gas YulOptimized: 62025
 // f4(bytes,uint256,uint256,bytes): 0x80, 1, 5, 0xC0, 8, "abcdefgh", 4, "bcde" -> true
+// gas Legacy: 25737
+// gas LegacyOptimized: 24730
+// gas Yul: 29556
+// gas YulOptimized: 26379
 // f4(bytes,uint256,uint256,bytes): 0x80, 1, 5, 0xC0, 8, "abcdefgh", 4, "bcdf" -> false
+// gas Legacy: 25564
+// gas LegacyOptimized: 24623
+// gas Yul: 29220
+// gas YulOptimized: 26227

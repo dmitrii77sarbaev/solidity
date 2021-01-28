@@ -10,9 +10,21 @@ contract C {
     }
 }
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // f() -> 0x3737373737373737373737373737373737373737373737373737373737373738
+// gas Legacy: 21399
+// gas LegacyOptimized: 21290
+// gas Yul: 21869
+// gas YulOptimized: 21457
 // g() -> 0x3737373737373737373737373737373737373737373737373737373737373739
+// gas Legacy: 21443
+// gas LegacyOptimized: 21334
+// gas Yul: 21913
+// gas YulOptimized: 21501
 // h() -> 0x373737373737373737373737373737373737373737373737373737373737373a
+// gas Legacy: 21421
+// gas LegacyOptimized: 21312
+// gas Yul: 21891
+// gas YulOptimized: 21479

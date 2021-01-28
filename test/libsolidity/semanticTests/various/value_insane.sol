@@ -21,4 +21,12 @@ contract test {
 // compileViaYul: also
 // ----
 // constructor(), 20 wei ->
+// gas Legacy: 306886
+// gas LegacyOptimized: 234055
+// gas Yul: 404870
+// gas YulOptimized: 205322
 // sendAmount(uint256): 5 -> 8
+// gas Legacy: 31646
+// gas LegacyOptimized: 30937
+// gas Yul: 33912
+// gas YulOptimized: 31020

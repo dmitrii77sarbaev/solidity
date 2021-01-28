@@ -41,4 +41,12 @@ contract C {
 // compileViaYul: also
 // ----
 // f(uint256): 0x0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f -> 0x1f, 0x1f, 3
+// gas Legacy: 22480
+// gas LegacyOptimized: 21913
+// gas Yul: 23649
+// gas YulOptimized: 21972
 // g(uint256): 0x0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f -> 1, 3, 5
+// gas Legacy: 22502
+// gas LegacyOptimized: 21953
+// gas Yul: 23803
+// gas YulOptimized: 22121

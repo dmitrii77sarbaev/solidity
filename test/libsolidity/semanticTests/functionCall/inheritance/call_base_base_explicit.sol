@@ -26,8 +26,16 @@ contract Child is Base {
 	}
 }
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // g(uint256): 4 -> 8
+// gas Legacy: 22103
+// gas LegacyOptimized: 21680
+// gas Yul: 22536
+// gas YulOptimized: 21813
 // k(uint256): 4 -> 16
+// gas Legacy: 22037
+// gas LegacyOptimized: 21626
+// gas Yul: 22470
+// gas YulOptimized: 21747

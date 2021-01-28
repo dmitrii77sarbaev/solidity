@@ -16,3 +16,5 @@ contract C {
 // compileViaYul: true
 // ----
 // f((uint16[])): 0x20, 0x20, 0x01, 0x0180 -> true
+// gas Yul: 23446
+// gas YulOptimized: 22360

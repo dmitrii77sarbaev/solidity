@@ -17,4 +17,12 @@ contract C {
 // compileViaYul: also
 // ----
 // to_little_endian_64(uint64): 0 -> 0x20, 8, 0x00
+// gas Legacy: 23221
+// gas LegacyOptimized: 22647
+// gas Yul: 26562
+// gas YulOptimized: 23091
 // to_little_endian_64(uint64): 0x0102030405060708 -> 0x20, 8, 0x0807060504030201000000000000000000000000000000000000000000000000
+// gas Legacy: 23317
+// gas LegacyOptimized: 22743
+// gas Yul: 26658
+// gas YulOptimized: 23187

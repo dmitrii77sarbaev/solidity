@@ -23,7 +23,27 @@ contract C {
 // compileViaYul: also
 // ----
 // test(bytes): 0x20, 0x80, 0x40, 0x60, 0, 0 -> false, false
+// gas Legacy: 24535
+// gas LegacyOptimized: 23526
+// gas Yul: 24884
+// gas YulOptimized: 23658
 // test(bytes): 0x20, 0xC0, 0x40, 0x80, 1, 0x42, 1, 0x42 -> false, false
+// gas Legacy: 25335
+// gas LegacyOptimized: 24018
+// gas Yul: 25694
+// gas YulOptimized: 24164
 // test(bytes): 0x20, 0x80, 0x40, 0x40, 1, 0x42 -> false, false
+// gas Legacy: 25043
+// gas LegacyOptimized: 23726
+// gas Yul: 25402
+// gas YulOptimized: 23872
 // test(bytes): 0x20, 0x60, 0x40, 0x40, 0 -> false, false
+// gas Legacy: 24401
+// gas LegacyOptimized: 23392
+// gas Yul: 24750
+// gas YulOptimized: 23524
 // test(bytes): 0x20, 0x80, 0x40, 0x40, 1, 0x42 -> false, false
+// gas Legacy: 25043
+// gas LegacyOptimized: 23726
+// gas Yul: 25402
+// gas YulOptimized: 23872

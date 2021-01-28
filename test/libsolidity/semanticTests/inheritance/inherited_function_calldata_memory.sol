@@ -21,3 +21,7 @@ contract B is A {
 // compileViaYul: also
 // ----
 // g() -> 23
+// gas Legacy: 26001
+// gas LegacyOptimized: 24354
+// gas Yul: 28679
+// gas YulOptimized: 25273

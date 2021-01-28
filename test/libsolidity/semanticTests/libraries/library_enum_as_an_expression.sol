@@ -14,3 +14,7 @@ contract Tsra {
 // compileViaYul: also
 // ----
 // f() -> 1
+// gas Legacy: 21379
+// gas LegacyOptimized: 21270
+// gas Yul: 21848
+// gas YulOptimized: 21229

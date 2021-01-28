@@ -16,7 +16,11 @@ contract C {
 }
 
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // f() -> 1, 2, 7
+// gas Legacy: 21306
+// gas LegacyOptimized: 21210
+// gas Yul: 21405
+// gas YulOptimized: 21232

@@ -19,9 +19,21 @@ contract C {
 }
 
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // f(uint256): 0 -> FAILURE, hex"4e487b71", 0x12
+// gas Legacy: 21611
+// gas LegacyOptimized: 21434
+// gas Yul: 21708
+// gas YulOptimized: 21450
 // g(uint256): 0 -> FAILURE, hex"4e487b71", 0x12
+// gas Legacy: 21655
+// gas LegacyOptimized: 21478
+// gas Yul: 21752
+// gas YulOptimized: 21494
 // h() -> 2
+// gas Legacy: 21489
+// gas LegacyOptimized: 21292
+// gas Yul: 22315
+// gas YulOptimized: 21459

@@ -13,4 +13,8 @@ contract C {
 // ====
 // compileViaYul: also
 // ----
-// f(int256[], uint256, uint256): 0x60, 1, 3, 4, 1, 2, 3, 4 -> 2
+// f(int256[],uint256,uint256): 0x60, 1, 3, 4, 1, 2, 3, 4 -> 2
+// gas Legacy: 91462
+// gas LegacyOptimized: 90635
+// gas Yul: 97196
+// gas YulOptimized: 93200

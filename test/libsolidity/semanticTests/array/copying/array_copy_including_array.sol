@@ -37,6 +37,13 @@ contract c {
 // compileViaYul: also
 // ----
 // test() -> 0x02000202
-// storage: empty
-// clear() -> 0, 0
+// gas Legacy: 2288641
+// gas LegacyOptimized: 2280949
+// gas Yul: 2481131
+// gas YulOptimized: 2481131
+// storage: empty// clear() -> 0, 0
+// gas Legacy: 1727169
+// gas LegacyOptimized: 1721217
+// gas Yul: 1856788
+// gas YulOptimized: 1856788
 // storage: empty

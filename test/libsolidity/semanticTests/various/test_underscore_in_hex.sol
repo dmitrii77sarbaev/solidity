@@ -6,8 +6,16 @@ contract test {
     }
 }
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // f(bool): true -> 0x1234ab
+// gas Legacy: 21840
+// gas LegacyOptimized: 21565
+// gas Yul: 22427
+// gas YulOptimized: 21640
 // f(bool): false -> 0x1234abcd1234
+// gas Legacy: 21832
+// gas LegacyOptimized: 21557
+// gas Yul: 22311
+// gas YulOptimized: 21618

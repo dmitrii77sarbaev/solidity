@@ -28,3 +28,7 @@ contract Test {
 // compileViaYul: also
 // ----
 // f() -> 0x202
+// gas Legacy: 48639
+// gas LegacyOptimized: 48129
+// gas Yul: 54708
+// gas YulOptimized: 44804

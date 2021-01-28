@@ -20,3 +20,7 @@ contract D is A, B, C {
 // compileViaYul: also
 // ----
 // query() -> 0x20, 7, 4, 2, 6, 1, 3, 5, 7
+// gas Legacy: 31206
+// gas LegacyOptimized: 29708
+// gas Yul: 34001
+// gas YulOptimized: 29480

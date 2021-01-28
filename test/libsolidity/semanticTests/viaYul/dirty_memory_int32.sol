@@ -13,7 +13,9 @@ contract C {
     }
 }
 // ====
-// compileViaYul: true
 // compileToEwasm: also
+// compileViaYul: true
 // ----
 // f() -> true
+// gas Yul: 23554
+// gas YulOptimized: 21980

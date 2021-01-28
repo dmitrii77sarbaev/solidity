@@ -6,7 +6,11 @@ contract Foo {
 }
 
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // constructor() ->
+// gas Legacy: 75943
+// gas LegacyOptimized: 75943
+// gas Yul: 64445
+// gas YulOptimized: 55629

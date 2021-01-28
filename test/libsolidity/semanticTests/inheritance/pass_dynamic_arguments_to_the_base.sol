@@ -18,3 +18,7 @@ contract Final is Derived(4) {}
 // compileViaYul: also
 // ----
 // m_i() -> 4
+// gas Legacy: 22159
+// gas LegacyOptimized: 22058
+// gas Yul: 22709
+// gas YulOptimized: 22022

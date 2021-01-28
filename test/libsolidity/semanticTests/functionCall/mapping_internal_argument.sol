@@ -18,6 +18,22 @@ contract test {
 // compileViaYul: also
 // ----
 // set(uint8,uint8,uint8): 1, 21, 42 -> 0, 0
+// gas Legacy: 66449
+// gas LegacyOptimized: 63998
+// gas Yul: 68114
+// gas YulOptimized: 65863
 // get(uint8): 1 -> 21, 42
+// gas Legacy: 23787
+// gas LegacyOptimized: 23373
+// gas Yul: 24643
+// gas YulOptimized: 23597
 // set(uint8,uint8,uint8): 1, 10, 11 -> 21, 42
+// gas Legacy: 28049
+// gas LegacyOptimized: 25598
+// gas Yul: 29714
+// gas YulOptimized: 27463
 // get(uint8): 1 -> 10, 11
+// gas Legacy: 23787
+// gas LegacyOptimized: 23373
+// gas Yul: 24643
+// gas YulOptimized: 23597

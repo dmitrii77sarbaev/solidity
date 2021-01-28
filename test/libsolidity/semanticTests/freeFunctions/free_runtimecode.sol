@@ -15,3 +15,7 @@ contract D {
 // compileViaYul: also
 // ----
 // f() -> true
+// gas Legacy: 21581
+// gas LegacyOptimized: 21475
+// gas Yul: 22401
+// gas YulOptimized: 21609

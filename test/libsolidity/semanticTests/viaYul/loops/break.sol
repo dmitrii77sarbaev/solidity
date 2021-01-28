@@ -24,9 +24,21 @@ contract C {
     }
 }
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // f() -> 2
+// gas Legacy: 21612
+// gas LegacyOptimized: 21350
+// gas Yul: 22337
+// gas YulOptimized: 21524
 // g() -> 2
+// gas Legacy: 21656
+// gas LegacyOptimized: 21394
+// gas Yul: 22381
+// gas YulOptimized: 21568
 // h() -> 2
+// gas Legacy: 21603
+// gas LegacyOptimized: 21367
+// gas Yul: 22229
+// gas YulOptimized: 21546

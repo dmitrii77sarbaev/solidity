@@ -25,3 +25,7 @@ contract CopyTest {
 // compileViaYul: also
 // ----
 // run() -> 2, 23, 42
+// gas Legacy: 97616
+// gas LegacyOptimized: 96316
+// gas Yul: 155198
+// gas YulOptimized: 114778

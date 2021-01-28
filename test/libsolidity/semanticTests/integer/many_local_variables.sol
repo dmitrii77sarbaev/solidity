@@ -6,7 +6,11 @@ contract test {
     }
 }
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // run(uint256,uint256,uint256): 0x1000, 0x10000, 0x100000 -> 0x121121
+// gas Legacy: 23854
+// gas LegacyOptimized: 22425
+// gas Yul: 24694
+// gas YulOptimized: 22269

@@ -20,3 +20,7 @@ contract C {
 // compileViaYul: also
 // ----
 // mapValue(uint256): 42 -> 0x24
+// gas Legacy: 62909
+// gas LegacyOptimized: 62435
+// gas Yul: 66168
+// gas YulOptimized: 62551

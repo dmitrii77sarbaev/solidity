@@ -11,8 +11,16 @@ contract C {
     }
 }
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // f(uint8,uint8): 0x00, 0x04 -> 0x0f
+// gas Legacy: 22132
+// gas LegacyOptimized: 21800
+// gas Yul: 22770
+// gas YulOptimized: 21818
 // f(uint8,uint8): 0x00, 0x1004 -> FAILURE
+// gas Legacy: 21834
+// gas LegacyOptimized: 21642
+// gas Yul: 21862
+// gas YulOptimized: 21603

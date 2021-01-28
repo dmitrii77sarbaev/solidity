@@ -32,8 +32,32 @@ contract C {
 // compileViaYul: also
 // ----
 // test_simple(uint256): 0 -> 3, 4, 5
+// gas Legacy: 85730
+// gas LegacyOptimized: 83868
+// gas Yul: 91259
+// gas YulOptimized: 84897
 // test_simple(uint256): 1 -> 3, 4, 5
+// gas Legacy: 47342
+// gas LegacyOptimized: 45480
+// gas Yul: 52871
+// gas YulOptimized: 46509
 // test_simple(uint256): 2 -> 3, 4, 5
+// gas Legacy: 47342
+// gas LegacyOptimized: 45480
+// gas Yul: 52871
+// gas YulOptimized: 46509
 // test_cleanup() -> true
+// gas Legacy: 42414
+// gas LegacyOptimized: 41328
+// gas Yul: 44588
+// gas YulOptimized: 42442
 // test_str() -> true
+// gas Legacy: 43055
+// gas LegacyOptimized: 42602
+// gas Yul: 45958
+// gas YulOptimized: 42796
 // test_twodim() -> 0, 3
+// gas Legacy: 43641
+// gas LegacyOptimized: 42187
+// gas Yul: 46320
+// gas YulOptimized: 43593

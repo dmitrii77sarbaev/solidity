@@ -14,5 +14,17 @@ contract C {
 // compileViaYul: also
 // ----
 // (), 1 ether
+// gas Legacy: 21055
+// gas LegacyOptimized: 21055
+// gas Yul: 21067
+// gas YulOptimized: 21067
 // call() -> 1, 2, 2, 2
+// gas Legacy: 53169
+// gas LegacyOptimized: 49632
+// gas Yul: 50779
+// gas YulOptimized: 50779
 // bal() -> 1000000000000000000
+// gas Legacy: 21425
+// gas LegacyOptimized: 21316
+// gas Yul: 21521
+// gas YulOptimized: 21521

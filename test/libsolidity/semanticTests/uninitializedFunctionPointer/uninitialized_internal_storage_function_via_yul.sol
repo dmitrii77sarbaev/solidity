@@ -15,3 +15,5 @@ contract Test {
 // compileViaYul: true
 // ----
 // f() -> true
+// gas Yul: 23007
+// gas YulOptimized: 22242

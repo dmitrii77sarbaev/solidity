@@ -36,11 +36,26 @@ contract C {
     }
 }
 // ====
-// compileViaYul: also
 // EVMVersion: >=byzantium
+// compileViaYul: also
 // ----
-// library: L
-// f(bool): true -> 8, 0x40, 0
+// library: L// f(bool): true -> 8, 0x40, 0
+// gas Legacy: 25119
+// gas LegacyOptimized: 23920
+// gas Yul: 26572
+// gas YulOptimized: 24464
 // f(bool): false -> 18, 0x40, 7, "failure"
+// gas Legacy: 25588
+// gas LegacyOptimized: 24387
+// gas Yul: 26360
+// gas YulOptimized: 24571
 // g(bool): true -> 9, 0x40, 0
+// gas Legacy: 45895
+// gas LegacyOptimized: 44729
+// gas Yul: 48639
+// gas YulOptimized: 45141
 // g(bool): false -> 19, 0x40, 7, "failure"
+// gas Legacy: 26358
+// gas LegacyOptimized: 25182
+// gas Yul: 28239
+// gas YulOptimized: 25311

@@ -15,3 +15,7 @@ contract C {
 // compileViaYul: also
 // ----
 // f(string[]): 0x20, 0x1, 0x20, 0x2, hex"6162000000000000000000000000000000000000000000000000000000000000" -> 1, 2, 97, 0x80, 2, "ab"
+// gas Legacy: 23680
+// gas LegacyOptimized: 23045
+// gas Yul: 25332
+// gas YulOptimized: 23308

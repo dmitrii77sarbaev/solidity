@@ -26,5 +26,17 @@ contract Test is C {
 // compileViaYul: also
 // ----
 // c() -> 0x20, 1, "C"
+// gas Legacy: 21849
+// gas LegacyOptimized: 21604
+// gas Yul: 22706
+// gas YulOptimized: 21986
 // a() -> 0x20, 1, "A"
+// gas Legacy: 21805
+// gas LegacyOptimized: 21560
+// gas Yul: 22662
+// gas YulOptimized: 21942
 // i() -> 0x20, 1, "I"
+// gas Legacy: 21871
+// gas LegacyOptimized: 21626
+// gas Yul: 22728
+// gas YulOptimized: 22008

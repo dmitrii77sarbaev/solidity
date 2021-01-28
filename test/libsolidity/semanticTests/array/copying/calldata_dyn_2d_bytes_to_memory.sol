@@ -9,3 +9,7 @@ contract C {
 // compileViaYul: also
 // ----
 // f(bytes[]): 0x20, 2, 0x60, 0x60, 0x20, 2, "ab" -> 0x20, 2, 0x40, 0x80, 2, "ab", 2, "ab"
+// gas Legacy: 26217
+// gas LegacyOptimized: 24350
+// gas Yul: 26530
+// gas YulOptimized: 24517

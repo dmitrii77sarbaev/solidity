@@ -15,3 +15,7 @@ contract C {
 // compileViaYul: also
 // ----
 // set(string): 0x20, 32, "01234567890123456789012345678901" -> 0, 0, 0, 0, 0, 0xe0, 0, 0
+// gas Legacy: 26611
+// gas LegacyOptimized: 24467
+// gas Yul: 29346
+// gas YulOptimized: 25082

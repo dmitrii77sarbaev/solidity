@@ -11,7 +11,11 @@ contract Test {
     }
 }
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // f() -> 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x07
+// gas Legacy: 28117
+// gas LegacyOptimized: 24369
+// gas Yul: 34425
+// gas YulOptimized: 25920

@@ -16,4 +16,8 @@ contract C {
 // compileViaYul: false
 // ----
 // l(uint8): 64 -> 0x3930313233343536373839300000000000000000000000000000000000000000
+// gas Legacy: 21833
+// gas LegacyOptimized: 21559
 // r(uint8): 64 -> 0x313233343536373839303132000000000000000000000000
+// gas Legacy: 21855
+// gas LegacyOptimized: 21581

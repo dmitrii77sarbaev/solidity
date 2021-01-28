@@ -18,8 +18,16 @@ contract C {
 }
 
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // one() -> 3
+// gas Legacy: 154760
+// gas LegacyOptimized: 154630
+// gas Yul: 68207
+// gas YulOptimized: 58809
 // two() -> FAILURE, hex"4e487b71", 0x51
+// gas Legacy: 42980
+// gas LegacyOptimized: 42883
+// gas Yul: 44983
+// gas YulOptimized: 42080

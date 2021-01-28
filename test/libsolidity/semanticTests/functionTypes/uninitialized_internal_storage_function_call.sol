@@ -8,7 +8,11 @@ contract Test {
 }
 
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // f() -> FAILURE, hex"4e487b71", 0x51
+// gas Legacy: 22075
+// gas LegacyOptimized: 22051
+// gas Yul: 22390
+// gas YulOptimized: 21229

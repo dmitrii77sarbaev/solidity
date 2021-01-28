@@ -8,11 +8,17 @@ contract c {
     function clear() public { delete data; }
 }
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
-// storage: empty
-// fill() ->
-// storage: nonempty
-// clear() ->
+// storage: empty// fill() ->
+// gas Legacy: 82473
+// gas LegacyOptimized: 81882
+// gas Yul: 87980
+// gas YulOptimized: 81821
+// storage: nonempty// clear() ->
+// gas Legacy: 23654
+// gas LegacyOptimized: 23648
+// gas Yul: 28201
+// gas YulOptimized: 26629
 // storage: empty

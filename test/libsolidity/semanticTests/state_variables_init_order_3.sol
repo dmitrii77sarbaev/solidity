@@ -20,10 +20,26 @@ contract B is A {
 // compileViaYul: true
 // ----
 // a() -> 17
+// gas Yul: 22722
+// gas YulOptimized: 22243
 // b() -> 42
+// gas Yul: 22744
+// gas YulOptimized: 22265
 // c() -> 51
+// gas Yul: 22810
+// gas YulOptimized: 22331
 // b_a() -> 17
+// gas Yul: 22854
+// gas YulOptimized: 22375
 // b_b() -> 42
+// gas Yul: 22832
+// gas YulOptimized: 22353
 // b_c() -> 51
+// gas Yul: 22876
+// gas YulOptimized: 22397
 // d() -> 23
+// gas Yul: 22766
+// gas YulOptimized: 22287
 // e() -> 42
+// gas Yul: 22898
+// gas YulOptimized: 22419

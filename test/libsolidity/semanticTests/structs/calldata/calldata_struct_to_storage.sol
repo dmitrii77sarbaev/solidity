@@ -17,7 +17,11 @@ contract C {
 }
 
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // f(uint32,(uint256,uint64,bytes2),uint256): 1, 42, 23, "ab", 1 -> 42, 23, "b"
+// gas Legacy: 70304
+// gas LegacyOptimized: 65767
+// gas Yul: 71396
+// gas YulOptimized: 64159

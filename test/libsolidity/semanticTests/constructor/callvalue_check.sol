@@ -32,10 +32,42 @@ contract C {
 // compileViaYul: also
 // ----
 // f(uint256), 2000 ether: 0 -> true
+// gas Legacy: 74906
+// gas LegacyOptimized: 74604
+// gas Yul: 65013
+// gas YulOptimized: 55922
 // f(uint256), 2000 ether: 100 -> false
+// gas Legacy: 54088
+// gas LegacyOptimized: 53786
+// gas Yul: 54806
+// gas YulOptimized: 53915
 // g(uint256), 2000 ether: 0 -> true
+// gas Legacy: 74950
+// gas LegacyOptimized: 74648
+// gas Yul: 65057
+// gas YulOptimized: 55966
 // g(uint256), 2000 ether: 100 -> false
+// gas Legacy: 54132
+// gas LegacyOptimized: 53830
+// gas Yul: 54850
+// gas YulOptimized: 53959
 // h(uint256), 2000 ether: 0 -> true
+// gas Legacy: 74928
+// gas LegacyOptimized: 74626
+// gas Yul: 65035
+// gas YulOptimized: 55944
 // h(uint256), 2000 ether: 100 -> false
+// gas Legacy: 54110
+// gas LegacyOptimized: 53808
+// gas Yul: 54828
+// gas YulOptimized: 53937
 // i(uint256), 2000 ether: 0 -> true
+// gas Legacy: 74884
+// gas LegacyOptimized: 74582
+// gas Yul: 64991
+// gas YulOptimized: 55900
 // i(uint256), 2000 ether: 100 -> false
+// gas Legacy: 54066
+// gas LegacyOptimized: 53764
+// gas Yul: 54784
+// gas YulOptimized: 53893

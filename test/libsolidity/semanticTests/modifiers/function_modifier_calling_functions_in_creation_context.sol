@@ -49,3 +49,7 @@ contract C is A {
 // compileViaYul: also
 // ----
 // getData() -> 0x4300
+// gas Legacy: 22179
+// gas LegacyOptimized: 22070
+// gas Yul: 22743
+// gas YulOptimized: 22243

@@ -29,4 +29,12 @@ contract C {
 // compileViaYul: also
 // ----
 // g(bool): false -> 23, 37, 71
+// gas Legacy: 35539
+// gas LegacyOptimized: 31514
+// gas Yul: 33555
+// gas YulOptimized: 33555
 // g(bool): true -> 23, 37, 71
+// gas Legacy: 40604
+// gas LegacyOptimized: 34431
+// gas Yul: 36952
+// gas YulOptimized: 36952

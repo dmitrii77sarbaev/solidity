@@ -17,7 +17,11 @@ contract test {
 }
 
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // deleteMember() -> 0
+// gas Legacy: 23833
+// gas LegacyOptimized: 22076
+// gas Yul: 26885
+// gas YulOptimized: 22841

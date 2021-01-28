@@ -15,9 +15,21 @@ contract C {
     }
 }
 // ====
-// compileViaYul: also
 // EVMVersion: >homestead
+// compileViaYul: also
 // ----
 // f(uint256[][1]): 32, 32, 0 -> true
+// gas Legacy: 53967
+// gas LegacyOptimized: 48434
+// gas Yul: 105308
+// gas YulOptimized: 71146
 // f(uint256[][1]): 32, 32, 1, 42 -> true
+// gas Legacy: 65256
+// gas LegacyOptimized: 57906
+// gas Yul: 139370
+// gas YulOptimized: 90708
 // f(uint256[][1]): 32, 32, 8, 421, 422, 423, 424, 425, 426, 427, 428 -> true
+// gas Legacy: 144300
+// gas LegacyOptimized: 124231
+// gas Yul: 377825
+// gas YulOptimized: 227663

@@ -12,7 +12,11 @@ contract C {
     }
 }
 // ====
-// compileViaYul: also
 // EVMVersion: >=tangerineWhistle
+// compileViaYul: also
 // ----
 // f() -> true
+// gas Legacy: 54477
+// gas LegacyOptimized: 54353
+// gas Yul: 55270
+// gas YulOptimized: 54314

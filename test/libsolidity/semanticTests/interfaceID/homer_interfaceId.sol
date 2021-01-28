@@ -30,10 +30,26 @@ contract Homer is ERC165, Simpson {
 }
 
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // supportsInterface(bytes4): left(0x01ffc9a0) -> false
+// gas Legacy: 21902
+// gas LegacyOptimized: 21676
+// gas Yul: 22422
+// gas YulOptimized: 21806
 // supportsInterface(bytes4): left(0x01ffc9a7) -> true
+// gas Legacy: 21873
+// gas LegacyOptimized: 21638
+// gas Yul: 22290
+// gas YulOptimized: 21786
 // supportsInterface(bytes4): left(0x73b6b492) -> true
+// gas Legacy: 21902
+// gas LegacyOptimized: 21676
+// gas Yul: 22422
+// gas YulOptimized: 21806
 // supportsInterface(bytes4): left(0x70b6b492) -> false
+// gas Legacy: 21902
+// gas LegacyOptimized: 21676
+// gas Yul: 22422
+// gas YulOptimized: 21806

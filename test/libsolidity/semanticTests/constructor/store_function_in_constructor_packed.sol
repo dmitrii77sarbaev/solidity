@@ -18,9 +18,21 @@ contract C {
 }
 
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // use(uint16): 3 -> 0xfff9
+// gas Legacy: 23039
+// gas LegacyOptimized: 22677
+// gas Yul: 23682
+// gas YulOptimized: 22751
 // result_in_constructor() -> 0xfffb
+// gas Legacy: 22210
+// gas LegacyOptimized: 22088
+// gas Yul: 22734
+// gas YulOptimized: 22252
 // other() -> 0x1fff
+// gas Legacy: 22307
+// gas LegacyOptimized: 22149
+// gas Yul: 22778
+// gas YulOptimized: 22302

@@ -7,7 +7,11 @@ contract CalldataTest {
     }
 }
 // ====
-// compileViaYul: also
 // EVMVersion: >=byzantium
+// compileViaYul: also
 // ----
 // tester(bytes): 0x20, 0x08, "abcdefgh" -> "c"
+// gas Legacy: 26020
+// gas LegacyOptimized: 25001
+// gas Yul: 27316
+// gas YulOptimized: 25374

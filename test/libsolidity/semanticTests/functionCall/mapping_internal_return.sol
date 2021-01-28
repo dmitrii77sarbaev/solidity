@@ -21,4 +21,12 @@ contract test {
 // compileViaYul: also
 // ----
 // g() -> 0, 42, 0, 0, 84, 21
+// gas Legacy: 90415
+// gas LegacyOptimized: 88978
+// gas Yul: 93922
+// gas YulOptimized: 89757
 // h() -> 0, 42, 0, 0, 84, 17
+// gas Legacy: 32806
+// gas LegacyOptimized: 31349
+// gas Yul: 36305
+// gas YulOptimized: 32203

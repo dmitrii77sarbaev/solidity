@@ -23,9 +23,21 @@ contract test {
     }
 }
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // f(uint256[]): 32, 3, 1000, 1, 2 -> 3
+// gas Legacy: 23947
+// gas LegacyOptimized: 23188
+// gas Yul: 26703
+// gas YulOptimized: 23221
 // f(uint256[]): 32, 3, 100, 500, 300 -> 600
+// gas Legacy: 23402
+// gas LegacyOptimized: 22866
+// gas Yul: 25287
+// gas YulOptimized: 22938
 // f(uint256[]): 32, 11, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 111 -> 55
+// gas Legacy: 29082
+// gas LegacyOptimized: 26759
+// gas Yul: 37231
+// gas YulOptimized: 26869

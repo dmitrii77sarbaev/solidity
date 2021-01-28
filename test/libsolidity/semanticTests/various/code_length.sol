@@ -61,4 +61,12 @@ contract C {
 // compileViaYul: also
 // ----
 // constructor()
+// gas Legacy: 141051
+// gas LegacyOptimized: 99445
+// gas Yul: 218286
+// gas YulOptimized: 76286
 // f(): true, true -> true, true
+// gas Legacy: 23279
+// gas LegacyOptimized: 22994
+// gas Yul: 24403
+// gas YulOptimized: 22939

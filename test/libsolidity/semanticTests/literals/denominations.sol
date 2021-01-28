@@ -4,7 +4,11 @@ contract C {
 	function f() public view returns(uint) { return x; }
 }
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // f() -> 1000000001000000001
+// gas Legacy: 21379
+// gas LegacyOptimized: 21270
+// gas Yul: 21884
+// gas YulOptimized: 21229

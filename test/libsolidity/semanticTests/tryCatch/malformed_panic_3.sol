@@ -54,6 +54,22 @@ contract C {
 // compileViaYul: also
 // ----
 // a() -> FAILURE, hex"4e487b"
+// gas Legacy: 23510
+// gas LegacyOptimized: 23186
+// gas Yul: 23943
+// gas YulOptimized: 23318
 // b() -> FAILURE, hex"4e487b710000"
+// gas Legacy: 23697
+// gas LegacyOptimized: 23310
+// gas Yul: 24117
+// gas YulOptimized: 23448
 // c() -> 0x43
+// gas Legacy: 23989
+// gas LegacyOptimized: 23482
+// gas Yul: 24679
+// gas YulOptimized: 23843
 // d() -> 0x43
+// gas Legacy: 23960
+// gas LegacyOptimized: 23453
+// gas Yul: 24650
+// gas YulOptimized: 23814

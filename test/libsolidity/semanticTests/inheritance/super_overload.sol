@@ -23,8 +23,16 @@ contract C is A, B {
 }
 
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // g() -> 10
+// gas Legacy: 21488
+// gas LegacyOptimized: 21376
+// gas Yul: 22003
+// gas YulOptimized: 21503
 // h() -> 2
+// gas Legacy: 21676
+// gas LegacyOptimized: 21451
+// gas Yul: 22279
+// gas YulOptimized: 21580

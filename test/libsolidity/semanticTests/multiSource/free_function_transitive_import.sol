@@ -22,7 +22,11 @@ contract E is D {
 }
 
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // i() -> 1337
+// gas Legacy: 21458
+// gas LegacyOptimized: 21334
+// gas Yul: 21973
+// gas YulOptimized: 21481

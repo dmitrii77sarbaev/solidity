@@ -32,3 +32,7 @@ contract Derived is Base {
 // compileViaYul: also
 // ----
 // getA() -> 2
+// gas Legacy: 22189
+// gas LegacyOptimized: 22080
+// gas Yul: 22753
+// gas YulOptimized: 22250

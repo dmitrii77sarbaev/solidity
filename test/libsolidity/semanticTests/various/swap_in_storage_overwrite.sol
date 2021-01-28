@@ -24,14 +24,46 @@ contract c {
 }
 
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // x() -> 0, 0
+// gas Legacy: 23097
+// gas LegacyOptimized: 22891
+// gas Yul: 23809
+// gas YulOptimized: 23113
 // y() -> 0, 0
+// gas Legacy: 23141
+// gas LegacyOptimized: 22935
+// gas Yul: 23853
+// gas YulOptimized: 23157
 // set() ->
+// gas Legacy: 101332
+// gas LegacyOptimized: 101294
+// gas Yul: 106508
+// gas YulOptimized: 101473
 // x() -> 1, 2
+// gas Legacy: 23097
+// gas LegacyOptimized: 22891
+// gas Yul: 23809
+// gas YulOptimized: 23113
 // y() -> 3, 4
+// gas Legacy: 23141
+// gas LegacyOptimized: 22935
+// gas Yul: 23853
+// gas YulOptimized: 23157
 // swap() ->
+// gas Legacy: 27732
+// gas LegacyOptimized: 24420
+// gas Yul: 33620
+// gas YulOptimized: 26239
 // x() -> 1, 2
+// gas Legacy: 23097
+// gas LegacyOptimized: 22891
+// gas Yul: 23809
+// gas YulOptimized: 23113
 // y() -> 1, 2
+// gas Legacy: 23141
+// gas LegacyOptimized: 22935
+// gas Yul: 23853
+// gas YulOptimized: 23157

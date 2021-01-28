@@ -12,3 +12,7 @@ contract test {
 // 0x73b1693892219d736caba55bdb67216e485557ea6b6af75f37096c9aa6a5a75f,
 // 0xeeb940b1d03b21e36b0e47e79769f095fe2ab855bd91e3a38756b7d75a9c4549
 // -> 0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b
+// gas Legacy: 25179
+// gas LegacyOptimized: 24108
+// gas Yul: 25545
+// gas YulOptimized: 24041

@@ -14,8 +14,16 @@ contract C {
     }
 }
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // runtime(uint256): 3 -> 6
+// gas Legacy: 22037
+// gas LegacyOptimized: 21626
+// gas Yul: 22470
+// gas YulOptimized: 21698
 // initial() -> 4
+// gas Legacy: 22193
+// gas LegacyOptimized: 22092
+// gas Yul: 22744
+// gas YulOptimized: 22262

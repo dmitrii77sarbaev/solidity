@@ -17,4 +17,12 @@ contract C {
 // compileViaYul: also
 // ----
 // f(), 27 wei -> FAILURE
+// gas Legacy: 21109
+// gas LegacyOptimized: 21109
+// gas Yul: 21212
+// gas YulOptimized: 21171
 // balance() -> 0
+// gas Legacy: 21403
+// gas LegacyOptimized: 21294
+// gas Yul: 22632
+// gas YulOptimized: 21432

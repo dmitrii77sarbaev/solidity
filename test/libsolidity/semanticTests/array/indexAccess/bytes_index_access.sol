@@ -23,5 +23,17 @@ contract c {
 // compileViaYul: also
 // ----
 // direct(bytes,uint256): 0x40, 33, 34, 0x000102030405060708090A0B0C0D0E0F101112131415161718191A1B1C1D1E1F, left(0x2021) -> 0x21
+// gas Legacy: 23040
+// gas LegacyOptimized: 22700
+// gas Yul: 23008
+// gas YulOptimized: 23008
 // storageCopyRead(bytes,uint256): 0x40, 33, 34, 0x000102030405060708090A0B0C0D0E0F101112131415161718191A1B1C1D1E1F, left(0x2021) -> 0x21
+// gas Legacy: 87026
+// gas LegacyOptimized: 86663
+// gas Yul: 86309
+// gas YulOptimized: 86309
 // storageWrite() -> 0x193
+// gas Legacy: 56012
+// gas LegacyOptimized: 54734
+// gas Yul: 50449
+// gas YulOptimized: 50449

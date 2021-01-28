@@ -7,7 +7,11 @@ contract TransferTest {
 	function f() pure public {}
 }
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // f() ->
+// gas Legacy: 21186
+// gas LegacyOptimized: 21174
+// gas Yul: 21572
+// gas YulOptimized: 21214

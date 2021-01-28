@@ -6,7 +6,11 @@ contract C {
 }
 // ====
 // EVMVersion: >=byzantium
-// revertStrings: debug
 // compileViaYul: also
+// revertStrings: debug
 // ----
 // f(uint256[][]): 0x20, 1, 0x20, 0x0100000000000000000000 -> FAILURE, hex"08c379a0", 0x20, 28, "Invalid calldata tail length"
+// gas Legacy: 22315
+// gas LegacyOptimized: 22217
+// gas Yul: 22523
+// gas YulOptimized: 22219

@@ -14,7 +14,11 @@ contract C {
 }
 
 // ====
-// compileViaYul: also
 // EVMVersion: >=byzantium
+// compileViaYul: also
 // ----
 // f() -> 0x00, 0x08c379a000000000000000000000000000000000000000000000000000000000
+// gas Legacy: 22605
+// gas LegacyOptimized: 22258
+// gas Yul: 23197
+// gas YulOptimized: 22250

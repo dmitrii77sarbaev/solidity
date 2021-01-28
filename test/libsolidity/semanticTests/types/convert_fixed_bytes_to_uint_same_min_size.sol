@@ -4,7 +4,11 @@ contract Test {
     }
 }
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // bytesToUint(bytes1): "a" -> 0x61
+// gas Legacy: 21802
+// gas LegacyOptimized: 21551
+// gas Yul: 22289
+// gas YulOptimized: 21424

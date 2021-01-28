@@ -22,3 +22,7 @@ contract X is D, C, B, A {
 // compileViaYul: also
 // ----
 // g() -> 0x20, 4, 1, 3, 2, 4
+// gas Legacy: 27846
+// gas LegacyOptimized: 26903
+// gas Yul: 29462
+// gas YulOptimized: 26519

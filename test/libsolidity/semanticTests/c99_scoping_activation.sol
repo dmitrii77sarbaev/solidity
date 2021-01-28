@@ -35,10 +35,26 @@ contract test {
     }
 }
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // f() -> 3
+// gas Legacy: 21413
+// gas LegacyOptimized: 21270
+// gas Yul: 22059
+// gas YulOptimized: 21437
 // g() -> 0
+// gas Legacy: 21444
+// gas LegacyOptimized: 21314
+// gas Yul: 22046
+// gas YulOptimized: 21481
 // h() -> 3, 3, 4
+// gas Legacy: 21650
+// gas LegacyOptimized: 21349
+// gas Yul: 22303
+// gas YulOptimized: 21572
 // i() -> 3, 3
+// gas Legacy: 21580
+// gas LegacyOptimized: 21360
+// gas Yul: 22135
+// gas YulOptimized: 21526

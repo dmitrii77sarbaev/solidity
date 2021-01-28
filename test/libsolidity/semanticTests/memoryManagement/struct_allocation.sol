@@ -21,4 +21,12 @@ contract C {
 // compileViaYul: also
 // ----
 // withValue() -> 0x00
+// gas Legacy: 21766
+// gas LegacyOptimized: 21517
+// gas Yul: 22943
+// gas YulOptimized: 21673
 // withoutValue() -> 0x60
+// gas Legacy: 21794
+// gas LegacyOptimized: 21553
+// gas Yul: 22686
+// gas YulOptimized: 21763

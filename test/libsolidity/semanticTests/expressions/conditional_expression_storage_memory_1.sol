@@ -23,8 +23,16 @@ contract test {
     }
 }
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // f(bool): true -> 1
+// gas Legacy: 71867
+// gas LegacyOptimized: 71277
+// gas Yul: 51184
+// gas YulOptimized: 47593
 // f(bool): false -> 2
+// gas Legacy: 52665
+// gas LegacyOptimized: 52075
+// gas Yul: 31962
+// gas YulOptimized: 28371

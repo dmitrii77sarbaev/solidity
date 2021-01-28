@@ -54,5 +54,17 @@ contract Test {
 // compileViaYul: also
 // ----
 // testInit() -> 0, 0, 0, 0, true
+// gas Legacy: 22762
+// gas LegacyOptimized: 22144
+// gas Yul: 23150
+// gas YulOptimized: 23150
 // testCopyRead() -> 1, 2, 3, 4
+// gas Legacy: 90320
+// gas LegacyOptimized: 87120
+// gas Yul: 86405
+// gas YulOptimized: 86363
 // testAssign() -> 1, 2, 3, 4
+// gas Legacy: 22297
+// gas LegacyOptimized: 21828
+// gas Yul: 22163
+// gas YulOptimized: 22163

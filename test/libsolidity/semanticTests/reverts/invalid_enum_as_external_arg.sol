@@ -20,3 +20,7 @@ contract C {
 // compileViaYul: also
 // ----
 // test() -> FAILURE, hex"4e487b71", 33 # should throw #
+// gas Legacy: 21460
+// gas LegacyOptimized: 21340
+// gas Yul: 22615
+// gas YulOptimized: 22045

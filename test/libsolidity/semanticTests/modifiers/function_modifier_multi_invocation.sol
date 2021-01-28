@@ -17,4 +17,8 @@ contract C {
 // compileViaYul: false
 // ----
 // f(bool): false -> 1
+// gas Legacy: 21997
+// gas LegacyOptimized: 21611
 // f(bool): true -> 2
+// gas Legacy: 22211
+// gas LegacyOptimized: 21698

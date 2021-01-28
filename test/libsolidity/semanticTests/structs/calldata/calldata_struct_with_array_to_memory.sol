@@ -21,3 +21,7 @@ contract C {
 // compileViaYul: also
 // ----
 // f((uint256,uint256[2],uint256)): 42, 1, 2, 23 -> 42, 1, 2, 23
+// gas Legacy: 24416
+// gas LegacyOptimized: 22708
+// gas Yul: 25443
+// gas YulOptimized: 22868

@@ -12,3 +12,7 @@ contract test {
 // compileViaYul: also
 // ----
 // data(uint256): 7 -> 1, 2, true
+// gas Legacy: 24569
+// gas LegacyOptimized: 24061
+// gas Yul: 25472
+// gas YulOptimized: 24109

@@ -53,7 +53,27 @@ contract C {
 // compileViaYul: also
 // ----
 // test_zeroed_indicies(uint256): 1 ->
+// gas Legacy: 77519
+// gas LegacyOptimized: 76872
+// gas Yul: 86998
+// gas YulOptimized: 82335
 // test_zeroed_indicies(uint256): 5 ->
+// gas Legacy: 191267
+// gas LegacyOptimized: 188486
+// gas Yul: 243517
+// gas YulOptimized: 222625
 // test_zeroed_indicies(uint256): 10 ->
+// gas Legacy: 276129
+// gas LegacyOptimized: 271024
+// gas Yul: 363409
+// gas YulOptimized: 327375
 // test_zeroed_indicies(uint256): 15 ->
+// gas Legacy: 339254
+// gas LegacyOptimized: 331904
+// gas Yul: 460299
+// gas YulOptimized: 409400
 // test_zeroed_indicies(uint256): 0xFF ->
+// gas Legacy: 8477449
+// gas LegacyOptimized: 8343774
+// gas Yul: 10516489
+// gas YulOptimized: 9686975

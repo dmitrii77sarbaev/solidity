@@ -12,8 +12,16 @@ contract C {
     }
 }
 // ====
-// compileViaYul: also
 // EVMVersion: >=byzantium
+// compileViaYul: also
 // ----
 // f(bool): true -> 1, 2, 96, 0
+// gas Legacy: 25211
+// gas LegacyOptimized: 23889
+// gas Yul: 26424
+// gas YulOptimized: 24184
 // f(bool): false -> 0, 0, 96, 100, 0x8c379a000000000000000000000000000000000000000000000000000000000, 0x2000000000000000000000000000000000000000000000000000000000, 0x76d657373616765000000000000000000000000000000000000000000, 0
+// gas Legacy: 25164
+// gas LegacyOptimized: 24207
+// gas Yul: 26330
+// gas YulOptimized: 24475

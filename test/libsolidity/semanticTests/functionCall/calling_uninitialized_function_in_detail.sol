@@ -17,7 +17,11 @@ contract C {
 }
 
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // t() -> FAILURE, hex"4e487b71", 0x51
+// gas Legacy: 42915
+// gas LegacyOptimized: 42883
+// gas Yul: 44741
+// gas YulOptimized: 42061

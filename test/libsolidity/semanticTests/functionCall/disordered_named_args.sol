@@ -3,7 +3,11 @@ contract test {
     function b() public returns (uint r) { r = a({c: 3, a: 1, b: 2}); }
 }
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // b() -> 123
+// gas Legacy: 22450
+// gas LegacyOptimized: 21741
+// gas Yul: 23425
+// gas YulOptimized: 21797

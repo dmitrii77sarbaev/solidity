@@ -42,10 +42,37 @@ contract test {
 // compileViaYul: also
 // ----
 // getToDelete() -> 0
+// gas Legacy: 22179
+// gas LegacyOptimized: 22070
+// gas Yul: 22743
+// gas YulOptimized: 22243
 // getTopValue() -> 0
-// getNestedValue() -> 0
-// #mapping values should be the same#
+// gas Legacy: 22229
+// gas LegacyOptimized: 22114
+// gas Yul: 22793
+// gas YulOptimized: 22287
+// getNestedValue() -> 0 #mapping values should be the same#
+// gas Legacy: 22213
+// gas LegacyOptimized: 22092
+// gas Yul: 22777
+// gas YulOptimized: 22265
 // getTopMapping(uint256): 0 -> 1
+// gas Legacy: 22744
+// gas LegacyOptimized: 22429
+// gas Yul: 23348
+// gas YulOptimized: 22583
 // getTopMapping(uint256): 1 -> 2
+// gas Legacy: 22756
+// gas LegacyOptimized: 22441
+// gas Yul: 23360
+// gas YulOptimized: 22595
 // getNestedMapping(uint256): 0 -> true
+// gas Legacy: 22770
+// gas LegacyOptimized: 22419
+// gas Yul: 23344
+// gas YulOptimized: 22573
 // getNestedMapping(uint256): 1 -> false
+// gas Legacy: 22782
+// gas LegacyOptimized: 22431
+// gas Yul: 23356
+// gas YulOptimized: 22585

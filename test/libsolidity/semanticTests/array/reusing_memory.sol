@@ -26,3 +26,7 @@ contract Main {
 // compileViaYul: also
 // ----
 // f(uint256): 0x34 -> 0x46bddb1178e94d7f2892ff5f366840eb658911794f2c3a44c450aa2c505186c1
+// gas Legacy: 146185
+// gas LegacyOptimized: 135916
+// gas Yul: 193534
+// gas YulOptimized: 117287

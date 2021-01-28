@@ -15,3 +15,5 @@ contract Test {
 // compileViaYul: false
 // ----
 // f() -> true
+// gas Legacy: 22287
+// gas LegacyOptimized: 22134

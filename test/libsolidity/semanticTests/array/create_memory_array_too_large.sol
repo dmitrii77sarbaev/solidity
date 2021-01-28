@@ -20,8 +20,16 @@ contract C {
         return x[2];
     }}
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // f() -> FAILURE, hex"4e487b71", 0x41
+// gas Legacy: 21246
+// gas LegacyOptimized: 21225
+// gas Yul: 21565
+// gas YulOptimized: 21245
 // g() -> FAILURE, hex"4e487b71", 0x41
+// gas Legacy: 21268
+// gas LegacyOptimized: 21253
+// gas Yul: 21593
+// gas YulOptimized: 21317

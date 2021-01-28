@@ -9,7 +9,11 @@ contract D {
   }
 }
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // h() -> 61337
+// gas Legacy: 21853
+// gas LegacyOptimized: 21497
+// gas Yul: 22598
+// gas YulOptimized: 21229

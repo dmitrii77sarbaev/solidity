@@ -36,7 +36,11 @@ contract InvalidTest {
   }
 }
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // run() -> FAILURE, hex"4e487b71", 0x51
+// gas Legacy: 22094
+// gas LegacyOptimized: 22070
+// gas Yul: 22366
+// gas YulOptimized: 21299

@@ -41,10 +41,26 @@ contract C {
     }
 }
 // ====
-// compileViaYul: also
 // EVMVersion: >homestead
+// compileViaYul: also
 // ----
 // g() -> 32, 132, hex"15cfcc01", 32, 32, 1, 42, hex"00000000000000000000000000000000000000000000000000000000"
+// gas Legacy: 28389
+// gas LegacyOptimized: 26336
+// gas Yul: 27972
+// gas YulOptimized: 27942
 // h() -> 32, 132, hex"15cfcc01", 32, 32, 1, 42, hex"00000000000000000000000000000000000000000000000000000000"
+// gas Legacy: 34487
+// gas LegacyOptimized: 30502
+// gas Yul: 32589
+// gas YulOptimized: 32559
 // i() -> 32, 292, hex"dc0ee233", 32, 64, 160, 1, 0x42, 0x000142, 1, 0x010042, 0x010142, hex"00000000000000000000000000000000000000000000000000000000"
+// gas Legacy: 32015
+// gas LegacyOptimized: 28551
+// gas Yul: 31632
+// gas YulOptimized: 31602
 // j() -> 32, 292, hex"dc0ee233", 32, 64, 160, 1, 0x42, 0x000142, 1, 0x010042, 0x010142, hex"00000000000000000000000000000000000000000000000000000000"
+// gas Legacy: 39189
+// gas LegacyOptimized: 33675
+// gas Yul: 37232
+// gas YulOptimized: 37202

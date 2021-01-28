@@ -11,7 +11,11 @@ contract C {
     }
 }
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // f(bytes2,uint16): "abc", 0x40102 -> FAILURE # We input longer data on purpose. #
+// gas Legacy: 21711
+// gas LegacyOptimized: 21606
+// gas Yul: 21741
+// gas YulOptimized: 21579

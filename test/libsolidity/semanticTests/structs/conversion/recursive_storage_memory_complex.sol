@@ -50,3 +50,7 @@ contract CopyTest {
 // compileViaYul: also
 // ----
 // run() -> 0x20, 10, 0x42, 0x4200, 0x420000, 0x420001, 0x420002, 0x4201, 0x420100, 0x420101, 0x420102, 0x420103
+// gas Legacy: 54288
+// gas LegacyOptimized: 49175
+// gas Yul: 80936
+// gas YulOptimized: 55469

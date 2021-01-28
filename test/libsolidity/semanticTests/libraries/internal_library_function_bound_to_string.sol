@@ -16,3 +16,7 @@ contract C {
 // compileViaYul: also
 // ----
 // secondChar() -> 98
+// gas Legacy: 21573
+// gas LegacyOptimized: 21453
+// gas Yul: 23005
+// gas YulOptimized: 21519

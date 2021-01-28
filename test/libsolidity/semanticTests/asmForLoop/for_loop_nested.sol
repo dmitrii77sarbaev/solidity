@@ -14,10 +14,26 @@ contract C {
     }
 }
 // ====
-// compileViaYul: also
 // compileToEwasm: also
+// compileViaYul: also
 // ----
 // f(uint256): 0 -> 2
+// gas Legacy: 21835
+// gas LegacyOptimized: 21539
+// gas Yul: 22134
+// gas YulOptimized: 21617
 // f(uint256): 1 -> 18
+// gas Legacy: 22023
+// gas LegacyOptimized: 21718
+// gas Yul: 22323
+// gas YulOptimized: 21806
 // f(uint256): 2 -> 10
+// gas Legacy: 23723
+// gas LegacyOptimized: 23259
+// gas Yul: 24032
+// gas YulOptimized: 23488
 // f(uint256): 4 -> 91
+// gas Legacy: 21941
+// gas LegacyOptimized: 21636
+// gas Yul: 22241
+// gas YulOptimized: 21724

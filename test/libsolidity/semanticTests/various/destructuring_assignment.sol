@@ -36,3 +36,7 @@ contract C {
 // compileViaYul: also
 // ----
 // f(bytes): 0x20, 0x5, "abcde" -> 0
+// gas Legacy: 239258
+// gas LegacyOptimized: 238607
+// gas Yul: 249091
+// gas YulOptimized: 249042
